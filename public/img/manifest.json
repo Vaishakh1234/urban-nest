@@ -1,0 +1,32 @@
+{
+  "bedroom-warm": {
+    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoUAA0APwlur0+rpiQiMAgBcCEJQBdgBBsr2mLbiWDigADePzPhh6tdmx3Zo9updeb5qj3kVuvpFPT8rESI6/HHllGzieo+w53c3e0zUUUf9tauMK4yTi+OXyyJHKVUaC1wIOv83cUAAA==",
+    "width": 1536,
+    "height": 1024
+  },
+  "living-tv-unit": {
+    "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACwAwCdASoUAA0APwlurk+rpiQiMAgBcCEJYgCdABaYhG4y34IVYAD9lKnSly49SuIl8VCw/JzCirxs+0v5je9u7nLGpO5Wl7GkFrSY/SZNm7p/3BIoeURTqCKFnLa+KZYuET9wOt5jF54IcpT3m8ryoUt60upg0QAAAA==",
+    "width": 1536,
+    "height": 1024
+  },
+  "dining-kitchen": {
+    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoUAA0APwlurk+rpiQiMAgBcCEJQBWHKAAUcXnVwhlX+xgA/oaaxzZuX6s5X2kGg0MdmCb4DmI09N/G6E7Se5KnLt6miBa3IvP/1PzrD2UfGpaULnZkLnau736tsT4crT7+m+AuEAKcAAAA",
+    "width": 1536,
+    "height": 1024
+  },
+  "living-green-accent": {
+    "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoUAA0APwlur0+rpiQiMAgBcCEJQBOgBFXNaqEAfUGFCbUAAP7CIM2oGqetfjunis6YfDrhnz3hEBrAn4N1PKwBEuk+zeeg9SCoQdqnpZI4ZGQS1bo1MDKxOtI2B0h9wtZoA3iLddc0s2nSoEr5uf4AAAA=",
+    "width": 1536,
+    "height": 1024
+  },
+  "bedroom-classic": {
+    "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAwBACdASoUAA0APwlurk+rpiQiMAgBcCEJQBOmUABbeaSD4LLLVkTSNkQA/XASpjlImyEijxEHupzJhHuF9WlaXW0itTx8jrbAISgXs28r7IIlKYQBnyHjH0TVIbe2hdW0pPlbfdRuyNeh6ztBUY0AhhDACjlAAAA=",
+    "width": 1536,
+    "height": 1024
+  },
+  "living-open-plan": {
+    "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoUAA0APwlur0+rpiQiMAgBcCEJYwC06CBfj7Gb7Npex0AA/B09PHKLMwFNi5k+A9R7Iu46QvLjh1EKs8abHpp0uIUauunNbdiObuwaRsnuT9LwTdWD9N38mYpBfRKMHa/yx0bPrYhAGOmcsYAAAA==",
+    "width": 1536,
+    "height": 1024
+  }
+}

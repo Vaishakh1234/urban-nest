@@ -1,26 +1,141 @@
 @import "tailwindcss";
 
+/*
+  Design system derived from the Decori reference:
+  white page, warm off-white alternating bands, near-black inverted panels,
+  and a single amber/ochre accent used on pills, icons and arrow buttons.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --page: #ffffff;
+  --cream: #faf8f4;
+  --cream-2: #f4f0e9;
+  --ink: #1a1a1a;
+  --ink-2: #232120;
+
+  --accent: #5b6650;
+  --accent-hover: #4e5a45;
+  --accent-soft: #e9ede2;
+
+  --text: #1a1a1a;
+  --text-body: #55504b;
+  --text-dim: #8a837c;
+  --text-on-dark: #f5f1eb;
+  --text-on-dark-dim: #b3aca4;
+
+  /* Hairlines: low-opacity warm ink rather than a solid gray. */
+  --line: rgba(60, 48, 30, 0.13);
+  --line-dark: rgba(245, 241, 235, 0.12);
+
+  --radius-card: 20px;
+  --radius-img: 20px;
+
+  --background: var(--page);
+  --foreground: var(--text);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-page: var(--page);
+  --color-cream: var(--cream);
+  --color-cream-2: var(--cream-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+
+  --color-text: var(--text);
+  --color-text-body: var(--text-body);
+  --color-text-dim: var(--text-dim);
+  --color-on-dark: var(--text-on-dark);
+  --color-on-dark-dim: var(--text-on-dark-dim);
+
+  --color-line: var(--line);
+  --color-line-dark: var(--line-dark);
+
+  --font-sans: var(--font-body);
+
+  /* Soft, warm, multi-layer shadows — never plain black. */
+  --shadow-card:
+    0 1px 2px rgba(28, 24, 18, 0.04),
+    0 16px 32px -20px rgba(28, 24, 18, 0.12);
+  --shadow-card-hover:
+    0 2px 4px rgba(28, 24, 18, 0.05),
+    0 24px 48px -22px rgba(28, 24, 18, 0.18);
+  --shadow-btn:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 10px 24px -12px rgba(28, 24, 18, 0.35);
+  /* Resting state for filled pills: just the 1px top inner highlight. */
+  --shadow-pill: inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--page);
+  color: var(--text);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Section label chip — "• About", "• Services". A signature of the reference. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--text-body);
+  background: transparent;
+}
+.chip::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 85%, transparent);
+}
+.chip-dark {
+  border-color: var(--line-dark);
+  color: var(--text-on-dark);
+  background: transparent;
+}
+
+/* Headline sizing used across every page hero and section head. */
+.h-display {
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
