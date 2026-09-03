@@ -34,7 +34,13 @@ export function Logo({
         // decides LCP.
         loading={eager ? "eager" : "lazy"}
         decoding="async"
-        className={`h-11 w-auto object-contain sm:h-13 md:h-14 lg:h-[58px] ${imgClassName}`}
+        // Callers that pass their own h-* in imgClassName opt out of the
+        // default ramp entirely — Tailwind resolves same-property utilities by
+        // stylesheet order, not class order, so leaving both in place would let
+        // the defaults silently beat the override.
+        className={`w-auto object-contain ${
+          /\bh-/.test(imgClassName) ? "" : "h-11 sm:h-13 md:h-14 lg:h-[58px]"
+        } ${imgClassName}`}
       />
     </span>
   );
