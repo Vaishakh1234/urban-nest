@@ -1,73 +1,38 @@
 import { process } from "../content";
 
-/** One accent-coloured line icon per step, drawn in the reference's outlined style. */
-const icons = [
-  /* Initial Consultation — speech bubble */
-  <svg key="0" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-    <path
-      d="M21 12a8 8 0 0 1-8 8H4l2.3-2.9A8 8 0 1 1 21 12Z"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M8.5 12h.01M12 12h.01M15.5 12h.01"
-      stroke="currentColor"
-      strokeWidth="2.2"
-      strokeLinecap="round"
-    />
-  </svg>,
-  /* Concept Development — pencil over paper */
-  <svg key="1" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-    <path
-      d="M4 20h4l10.5-10.5a2.1 2.1 0 0 0 0-3L17 5a2.1 2.1 0 0 0-3 0L3.5 15.5 4 20Z"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinejoin="round"
-    />
-    <path d="m13 6.5 4.5 4.5" stroke="currentColor" strokeWidth="1.6" />
-  </svg>,
-  /* Design Execution — tools */
-  <svg key="2" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-    <path
-      d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-2.4 2.6-2.6Z"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinejoin="round"
-    />
-  </svg>,
-  /* Final Reveal — sparkle */
-  <svg key="3" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-    <path
-      d="M12 3.5 14 9.5l6 2-6 2-2 6-2-6-6-2 6-2 2-6Z"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinejoin="round"
-    />
-  </svg>,
-];
-
-/**
- * The four-step process row from the reference: centred columns with an accent-coloured
- * outlined icon each, joined by a dashed connector line on desktop.
- */
 export function ProcessSteps() {
   return (
-    <div className="relative mt-14">
-      <div
-        aria-hidden
-        className="absolute inset-x-12 top-6 hidden border-t border-dashed border-line lg:block"
-      />
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="relative mt-12">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {process.map((p, i) => (
-          <div key={p.title} className="flex flex-col items-center text-center">
-            <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-line bg-white text-accent">
-              {icons[i]}
-            </span>
-            <h3 className="mt-5 text-base font-semibold text-ink">{p.title}</h3>
-            <p className="mt-2.5 max-w-[260px] text-sm leading-relaxed text-text-body">
-              {p.copy}
-            </p>
+          <div
+            key={p.title}
+            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-stone-200/80 bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl reveal"
+          >
+            {/* Top Row: Badge & Step indicator */}
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-sm font-bold text-accent group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                  {p.number || `0${i + 1}`}
+                </span>
+                <span className="text-[11px] font-bold text-stone-400 tracking-wider uppercase">
+                  Step {i + 1} of 6
+                </span>
+              </div>
+
+              {/* Title & Body */}
+              <h3 className="mt-5 text-lg font-bold text-stone-900 group-hover:text-accent transition-colors">
+                {p.title}
+              </h3>
+              <p className="mt-2.5 text-xs leading-relaxed text-stone-600">
+                {p.copy}
+              </p>
+            </div>
+
+            {/* Subtle Bottom Accent Line */}
+            <div className="mt-6 h-1 w-full rounded-full bg-stone-100 overflow-hidden">
+              <div className="h-full w-0 bg-accent transition-all duration-500 group-hover:w-full" />
+            </div>
           </div>
         ))}
       </div>

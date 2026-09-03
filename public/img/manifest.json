@@ -1,32 +1,87 @@
 {
-  "bedroom-warm": {
-    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoUAA0APwlur0+rpiQiMAgBcCEJQBdgBBsr2mLbiWDigADePzPhh6tdmx3Zo9updeb5qj3kVuvpFPT8rESI6/HHllGzieo+w53c3e0zUUUf9tauMK4yTi+OXyyJHKVUaC1wIOv83cUAAA==",
-    "width": 1536,
+  "bedroom-caramel": {
+    "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwBACdASoUABQAPzmMulavKSUjqA1R4CcJYwAAL63lHkRo3yB6wQudDez53mUPp8AA/o1D0oZ1bzBTKgaQp0DiHATahcjuPgv8iKXFG97ombVg5+ETycQ2rvTNtwn0X2qsxurV5RtTl+Sdu40sV770HEwYf+/sGWAAAA==",
+    "width": 1024,
     "height": 1024
   },
-  "living-tv-unit": {
-    "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACwAwCdASoUAA0APwlurk+rpiQiMAgBcCEJYgCdABaYhG4y34IVYAD9lKnSly49SuIl8VCw/JzCirxs+0v5je9u7nLGpO5Wl7GkFrSY/SZNm7p/3BIoeURTqCKFnLa+KZYuET9wOt5jF54IcpT3m8ryoUt60upg0QAAAA==",
-    "width": 1536,
+  "bedroom-master-suite": {
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABQBACdASoUABQAPzmKu1UvKSYjKA1R4CcJYwC90BDep49ep+JGoUNfYQYAAP5R0LEQCcGB5dCUZbOcCBfmuFMmuFCylZTP49+pEqR5I9MdGI92YCxpW6MSiq2DnQxBhPH7pZNsX7IQzJDAAAA=",
+    "width": 1024,
     "height": 1024
   },
-  "dining-kitchen": {
-    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoUAA0APwlurk+rpiQiMAgBcCEJQBWHKAAUcXnVwhlX+xgA/oaaxzZuX6s5X2kGg0MdmCb4DmI09N/G6E7Se5KnLt6miBa3IvP/1PzrD2UfGpaULnZkLnau736tsT4crT7+m+AuEAKcAAAA",
-    "width": 1536,
+  "bedroom-wardrobe-vanity": {
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwBACdASoUABQAPzmOwFevKacjqAqp4CcJQBibAbzAloR1LfARkJ8D78BWvIAAAP5SZble7uJD4QUgAKpCNltjLzAy8luYCr8Ag+FmGl8NcE4bQqfGO6JsagI+IdWKBOx8AAAA",
+    "width": 1024,
     "height": 1024
   },
-  "living-green-accent": {
-    "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoUAA0APwlur0+rpiQiMAgBcCEJQBOgBFXNaqEAfUGFCbUAAP7CIM2oGqetfjunis6YfDrhnz3hEBrAn4N1PKwBEuk+zeeg9SCoQdqnpZI4ZGQS1bo1MDKxOtI2B0h9wtZoA3iLddc0s2nSoEr5uf4AAAA=",
-    "width": 1536,
+  "bedroom-warm-light": {
+    "blur": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACwBACdASoUABQAPzmSv1mvKaYjqAgB4CcJZQCo9BEk1syJn/HiYvH2soIOaOAAAP5RZg3DIS8F4W7mHSdhHIhTs2vQzKjQrLql8PakOd9vycz3C9/gAxLpGsBo/wmls/0bPIqa55lLaUzR1YAz7nrd8J0WFJ48GIlpjanoAAA=",
+    "width": 1024,
     "height": 1024
   },
-  "bedroom-classic": {
-    "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAwBACdASoUAA0APwlurk+rpiQiMAgBcCEJQBOmUABbeaSD4LLLVkTSNkQA/XASpjlImyEijxEHupzJhHuF9WlaXW0itTx8jrbAISgXs28r7IIlKYQBnyHjH0TVIbe2hdW0pPlbfdRuyNeh6ztBUY0AhhDACjlAAAA=",
-    "width": 1536,
+  "exterior-modern-villa": {
+    "blur": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABQBQCdASoUABQAPzmQu1gvKaWjqAqp4CcJYgCdMseOABN0YmQp9eYtEzYtnphWhZjnocAA/osVJRa+EOUujFxIB509cGi4JqL295NJW3Ci5K0Fak9LnyLQN0MHD1bX9pl79m2NmuEsMI/RSkWcLE59XkhCVibaoQQjJk8xemH0SP6nWzKyucCiiHtLJVnVwn4GyPs+AAA=",
+    "width": 1024,
+    "height": 1024
+  },
+  "false-ceiling-lighting": {
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACQBACdASoUABQAPzWKulOvKiYisBgMAeAmiWUAzNAPRseV+zEi/kBOJLztOAAA/sPxPSe2SonSyBIxN64K1t4nzUa5Ybz4CFRwVCWqvooRoWtkt27Wp35YE4VVvKdmnRhQHKAY1DzkQvgAAAA=",
+    "width": 1024,
+    "height": 1024
+  },
+  "hero-bedroom-suite": {
+    "blur": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACwBACdASoUABQAPzmUwVmvKicjqAgB4CcJQBhQAQah6gVtNGVA5ptyodKNTiAAAP48ZKY1BEgD2ixLxpGTSQqRyEvyj9CIuX19lYi6DsifysWgJ1ZCLUess1rzhd+REcgCKs/KvUjYCFkM+AnoMzbhI9sno20o0UYsAAAA",
+    "width": 1024,
+    "height": 1024
+  },
+  "hero-dining-warm": {
+    "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAACwBACdASoUABQAPzmSv1mvKaajqAgB4CcJQBYdgXFuSHQZea0UH9P0nc+k6MUAAP35mmwMjsQ6WYdWZhrVXcBUCZO01GsvKWRJoAgnQfW2IUrH4hTKtrIz7aZpORN9lf98td7xOUbl3nGVehG3zwWAuSaZwxlpcpWzthB+cmqLEID27FQXu/T0uRwAAA==",
+    "width": 1024,
+    "height": 1024
+  },
+  "hero-kitchen-modern": {
+    "blur": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADQBACdASoUABQAPzmUwFmvKiajqAgB4CcJYwC7AA3lg9ZRsE7LBoTVoqFWQ38hoAD+gUPcRs1fH9XFoqeo94VKD4YL8yBo9qHS4jXUqeIuQjmYlBxDE4C8CFZD+GHelAWzSA5uvVujb2pRF549Li6M62DWdyq+CP07IgLaQAAAAA==",
+    "width": 1024,
+    "height": 1024
+  },
+  "hero-living-airy": {
+    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBQCdASoUABQAPzmUwFmvKiajqAgB4CcJYwCdMoABo3UeKgptucS3yXlVxUjtqVySAP5RtE46Pm8de0GRp9o3j5q1GdxqkZFCGpfGaQi+UgIBsQLiiOSlRWaD0p+OsFa/d9GmnncbNkAlENEP8UlGW+T+8Ei/N9mWEcuL/aBYuwBf6woAAA==",
+    "width": 1024,
+    "height": 1024
+  },
+  "hero-living-warm": {
+    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADQBACdASoUABQAPzmUwVmvKicjqAgB4CcJYwDLLA3lqqbfOaoyOyeG1aW9janisAD1wizxCentlWNh/UzbigsRsElzYcaE737wRmeVIXK8RQPfkDcFBLWxF3nb8dWyDJlSgmQgJnI+3+tJShste5v+Z/+IYKqiqR3i7DtjYhtvN2h8wCywAA==",
+    "width": 1024,
+    "height": 1024
+  },
+  "kitchen-dining-combo": {
+    "blur": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoUABQAPzmOwlavKaejqAqp4CcJQBdgAiOVqSCWYrEGGg8bGzQAAP6uvXMoAQ/RiG8/Yehkvah3Iq04A/bfdQ8ajcDxaJR1wC9YburGJoF/JJV1uwOI6C8GK4XSIptSZnwin4MtdkwhAUyYuj2mne268HgAAAAA",
+    "width": 1024,
+    "height": 1024
+  },
+  "living-l-shaped-sofa": {
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQBACdASoUABQAPzmOuFavKaSjqA1R4CcJaQDOdBEc1gcYpp1MLpd2APCAAP7DUk/lgTKazgl+1tJrxsB57t4GcbJMht9IVQjJDU2FqVCdS6WjEX8vaQAA",
+    "width": 1024,
     "height": 1024
   },
   "living-open-plan": {
-    "blur": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoUAA0APwlur0+rpiQiMAgBcCEJYwC06CBfj7Gb7Npex0AA/B09PHKLMwFNi5k+A9R7Iu46QvLjh1EKs8abHpp0uIUauunNbdiObuwaRsnuT9LwTdWD9N38mYpBfRKMHa/yx0bPrYhAGOmcsYAAAA==",
-    "width": 1536,
+    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABQBACdASoUABQAPzmMuVavKSUjqA1R4CcJQBllgiOjg4y39doCfMfwgQewAP6vCqu5haBtet7SYHLHkB27keMNEgOGBIm97fUFxbFa/5NAIWY51tmbxDQlamS0Cto2rx+U14b/1+MbWWs0jgfloAAA",
+    "width": 1024,
+    "height": 1024
+  },
+  "living-pooja-alcove": {
+    "blur": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADQBACdASoUABQAPzmMulYvKSWjqA1R4CcJZwDO7BEOFSRYCSdVwURtnSP/NB1cAAD+jDFtXQzHuw5fiz3T3QEf1R5P/e/jik6pvn+7GJOR6VTqMeBxBIVsFBH1H6jrxsG+NYJuw7hJs7xS6I47tNlKULsI8aaVwAXEAA==",
+    "width": 1024,
+    "height": 1024
+  },
+  "living-tv-unit": {
+    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACQBACdASoUABQAPzmQvVgvKaYjqAqp4CcJZwAALnW5FVSQESKcJwK55Oo92cAA/sNSy3vhiraaVUDCzgcX+CVmc0fu6KAJXKHjjSvtjjZXeUKrruQTfchFfUH3pFdA+eLtIp2rlb5lQIwivPmAAA==",
+    "width": 1024,
+    "height": 1024
+  },
+  "wall-paneling-louver": {
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQBACdASoUABQAPzmQulgvKaUjqAqp4CcJYgC90BDRPWYAYtgmfpAXSHw4CT99gAD+yBqnviCI1AgKrg0jMzZFvssYYt/dELAdCLt66uEryYkxVjRNmAykBxpCpHGzEXN+KaVEVFgRjALAAAA=",
+    "width": 1024,
     "height": 1024
   }
 }

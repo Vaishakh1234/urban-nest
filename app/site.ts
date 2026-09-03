@@ -13,16 +13,16 @@ export const site = {
   phones: ["+91 95268 51964", "+91 80751 08105"],
   email: "urbannestinteriors5@gmail.com",
   address: {
-    street: "Mavila",
+    street: "Vallicode",
     city: "Pathanamthitta",
     region: "Kerala",
-    postalCode: "689645",
+    postalCode: "689648",
     country: "IN",
-    full: "Mavila, Pathanamthitta, Kerala 689645, India",
+    full: "Urbannest Interiors, Vallicode, Pathanamthitta, Kerala 689648",
   },
-  geo: { lat: 9.2648, lng: 76.787 },
+  geo: { lat: 9.2272, lng: 76.7972 },
   mapsUrl:
-    "https://maps.google.com/?q=7Q7P%2BWR3+Mavila+Pathanamthitta+Kerala+689645",
+    "https://www.google.com/maps/search/?api=1&query=Urbannest+Interiors%2C+Vallicode%2C+Pathanamthitta%2C+Kerala+689648",
   instagram: "https://www.instagram.com/urbannest44/",
   youtube: "https://youtube.com/@urbannestinteriors-q3k",
   hours: "Open 24 hours",
@@ -32,7 +32,17 @@ export const site = {
 
 /** Digits only — for tel: and wa.me links. */
 export const primaryPhoneHref = "tel:+919526851964";
-export const whatsappHref = "https://wa.me/919526851964";
+
+export const defaultWhatsappMessage = "Hello Urbannest Interiors! I visited your website and would like to enquire about an interior design project for my home.";
+
+export function getWhatsappHref(topic?: string) {
+  const text = topic
+    ? `Hello Urbannest Interiors! I visited your website regarding: ${topic}. Please connect with me.`
+    : defaultWhatsappMessage;
+  return `https://wa.me/919526851964?text=${encodeURIComponent(text)}`;
+}
+
+export const whatsappHref = getWhatsappHref();
 
 export const nav = [
   { href: "/", label: "Home" },
