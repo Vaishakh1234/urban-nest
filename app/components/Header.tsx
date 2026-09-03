@@ -49,14 +49,14 @@ export function Header() {
         }`}
       >
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
-          <div className="flex h-[76px] items-center justify-between gap-4 sm:h-[84px] lg:h-[88px]">
+          <div className="flex h-15 items-center justify-between gap-4 sm:h-16.5 lg:h-22">
             {/* Logo Section */}
             <Link
               href="/"
               aria-label={`${site.name} — home`}
               className="group flex items-center gap-3 rounded-2xl py-1 focus-visible:outline-2 focus-visible:outline-accent"
             >
-              <Logo imgClassName="h-11 sm:h-13 md:h-14 lg:h-[58px]" />
+              <Logo imgClassName="h-8 sm:h-9 md:h-10 lg:h-[58px]" />
             </Link>
 
             {/* Desktop Navigation - Modern Active Pill Capsule */}
@@ -115,7 +115,7 @@ export function Header() {
               {/* Primary CTA Button */}
               <Link
                 href="/contact"
-                className="hidden sm:inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white shadow-[0_4px_14px_rgba(101,96,66,0.28)] transition-all duration-200 hover:bg-accent-hover hover:shadow-[0_6px_20px_rgba(101,96,66,0.38)] active:scale-95"
+                className="hidden sm:inline-flex items-center justify-center gap-2 rounded-full bg-accent px-4 py-2 text-[13px] font-medium text-white lg:px-5 lg:py-2.5 lg:text-sm shadow-[0_4px_14px_rgba(101,96,66,0.28)] transition-all duration-200 hover:bg-accent-hover hover:shadow-[0_6px_20px_rgba(101,96,66,0.38)] active:scale-95"
               >
                 <span>Get a Quote</span>
                 <svg
@@ -138,11 +138,11 @@ export function Header() {
                 type="button"
                 onClick={() => setCallModalOpen(true)}
                 aria-label="Call options"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-stone-200/80 bg-stone-50 text-accent transition-colors hover:bg-accent hover:text-white lg:hidden"
+                className="flex h-9.5 w-9.5 items-center justify-center rounded-full border border-stone-200/80 bg-stone-50 text-accent transition-colors hover:bg-accent hover:text-white sm:h-10 sm:w-10 lg:hidden"
               >
                 <svg
-                  width="18"
-                  height="18"
+                  width="17"
+                  height="17"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -161,15 +161,15 @@ export function Header() {
                 onClick={() => setOpen((v) => !v)}
                 aria-expanded={open}
                 aria-label={open ? "Close menu" : "Open menu"}
-                className={`flex h-11 w-11 items-center justify-center rounded-full border transition-all duration-200 lg:hidden ${
+                className={`flex h-9.5 w-9.5 items-center justify-center rounded-full border transition-all duration-200 sm:h-10 sm:w-10 lg:hidden ${
                   open
                     ? "border-accent bg-accent text-white shadow-md rotate-90"
                     : "border-stone-200/80 bg-stone-50 text-stone-800 hover:border-accent hover:text-accent"
                 }`}
               >
                 <svg
-                  width="20"
-                  height="20"
+                  width="18"
+                  height="18"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -206,29 +206,29 @@ export function Header() {
       {/* Mobile Application Navigation Side Drawer */}
       {open && (
         <div className="fixed inset-0 z-50 lg:hidden">
-          {/* Dark Backdrop Blur Overlay */}
+          {/* Backdrop Blur Overlay */}
           <div
-            className="fixed inset-0 bg-black/75 backdrop-blur-md transition-opacity duration-300"
+            className="fixed inset-0 bg-ink/30 backdrop-blur-sm transition-opacity duration-300"
             onClick={() => setOpen(false)}
             aria-hidden="true"
           />
 
-          {/* Full Height Right Slide-Over Side Drawer */}
-          <div className="fixed inset-y-0 right-0 z-50 flex h-full w-full max-w-[340px] sm:max-w-[380px] flex-col justify-between bg-[#111113] text-stone-100 shadow-2xl border-l border-stone-800/80 animate-in slide-in-from-right duration-300">
-            {/* Drawer Header */}
-            <div className="flex items-center justify-between border-b border-stone-800/80 px-6 py-5">
+          {/* Full Width Slide-Over Side Drawer */}
+          <div className="fixed inset-0 z-50 flex h-full w-full flex-col justify-between bg-white text-ink animate-in slide-in-from-right duration-300">
+            {/* Drawer Header — matches the collapsed header bar height */}
+            <div className="flex h-15 shrink-0 items-center justify-between border-b border-stone-200 px-4 sm:h-16.5 sm:px-6">
               <Link
                 href="/"
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-2"
               >
-                <Logo dark eager={false} imgClassName="h-9 w-auto" />
+                <Logo eager={false} imgClassName="h-8 w-auto sm:h-9" />
               </Link>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label="Close menu"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-stone-800 bg-stone-900 text-stone-400 hover:border-stone-700 hover:text-white"
+                className="flex h-9.5 w-9.5 items-center justify-center rounded-full border border-stone-200 bg-stone-50 text-stone-600 transition-colors hover:border-accent hover:text-accent sm:h-10 sm:w-10"
               >
                 <svg
                   width="18"
@@ -246,9 +246,9 @@ export function Header() {
               </button>
             </div>
 
-            {/* Notion-Style Minimal Navigation List */}
-            <div className="flex-1 overflow-y-auto px-4 py-6">
-              <p className="px-3 text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-3">
+            {/* Minimal Navigation List */}
+            <div className="mx-auto w-full max-w-140 flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+              <p className="mb-3 px-4 text-[10px] font-bold uppercase tracking-widest text-stone-400">
                 Navigation
               </p>
               <nav className="space-y-1">
@@ -265,14 +265,14 @@ export function Header() {
                       aria-current={active ? "page" : undefined}
                       className={`group flex items-center justify-between rounded-xl px-4 py-3.5 transition-all duration-200 ${
                         active
-                          ? "bg-stone-800/90 text-white font-semibold"
-                          : "text-stone-300 hover:bg-stone-900 hover:text-white"
+                          ? "bg-accent-soft font-semibold text-accent"
+                          : "text-stone-700 hover:bg-stone-50 hover:text-ink"
                       }`}
                     >
                       <div className="flex items-center gap-3">
                         <span
                           className={`h-2 w-2 rounded-full transition-all ${
-                            active ? "bg-accent scale-110" : "bg-stone-700 group-hover:bg-stone-500"
+                            active ? "bg-accent scale-110" : "bg-stone-300 group-hover:bg-stone-400"
                           }`}
                         />
                         <span className="text-base">{item.label}</span>
@@ -289,7 +289,7 @@ export function Header() {
                         className={`transition-transform ${
                           active
                             ? "text-accent translate-x-0.5"
-                            : "text-stone-600 group-hover:text-stone-400 group-hover:translate-x-0.5"
+                            : "text-stone-300 group-hover:text-stone-500 group-hover:translate-x-0.5"
                         }`}
                       >
                         <polyline points="9 18 15 12 9 6" />
@@ -300,20 +300,20 @@ export function Header() {
               </nav>
 
               {/* Pathanamthitta Badge */}
-              <div className="mt-8 px-3">
-                <div className="inline-flex items-center gap-2 rounded-full border border-stone-800 bg-stone-900/80 px-3.5 py-1.5 text-xs text-stone-400">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="mt-8 px-4">
+                <div className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-stone-50 px-3.5 py-1.5 text-xs text-stone-500">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   <span>Serving Pathanamthitta & Kerala</span>
                 </div>
               </div>
             </div>
 
             {/* Drawer Bottom Bar — ONLY ONE CTA BUTTON */}
-            <div className="border-t border-stone-800/80 bg-stone-950/90 p-5">
+            <div className="shrink-0 border-t border-stone-200 bg-white p-4 pb-[max(1rem,env(safe-area-inset-bottom))] sm:p-6">
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="flex w-full items-center justify-center gap-2.5 rounded-full bg-accent py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:bg-accent-hover active:scale-[0.98]"
+                className="mx-auto flex w-full max-w-140 items-center justify-center gap-2.5 rounded-full bg-accent py-3.5 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(101,96,66,0.28)] transition-all duration-200 hover:bg-accent-hover active:scale-[0.98]"
               >
                 <span>Get a Free Quote</span>
                 <svg
