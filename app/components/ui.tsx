@@ -4,12 +4,15 @@ import type { ReactNode } from "react";
 export function Container({
   children,
   className = "",
+  size = "lg",
 }: {
   children: ReactNode;
   className?: string;
+  size?: "sm" | "md" | "lg";
 }) {
+  const max = size === "sm" ? "max-w-4xl" : size === "md" ? "max-w-[1280px]" : "max-w-[1440px]";
   return (
-    <div className={`mx-auto w-full max-w-[1280px] px-5 sm:px-8 ${className}`}>
+    <div className={`mx-auto w-full ${max} px-5 sm:px-8 ${className}`}>
       {children}
     </div>
   );
@@ -19,16 +22,11 @@ export function Section({
   children,
   className = "",
   id,
-  pad = "py-16 sm:py-24",
+  pad = "py-16 sm:py-24 lg:py-32",
 }: {
   children: ReactNode;
   className?: string;
   id?: string;
-  /**
-   * Vertical padding classes. Passed as a prop (not merged into className)
-   * because conflicting Tailwind padding utilities resolve by stylesheet
-   * order, so `pt-0` in className would silently lose to `sm:py-24`.
-   */
   pad?: string;
 }) {
   return (
@@ -38,7 +36,6 @@ export function Section({
   );
 }
 
-/** The small outlined pill that labels every section in the reference. */
 export function Chip({
   children,
   dark = false,
@@ -49,7 +46,6 @@ export function Chip({
   return <span className={`chip ${dark ? "chip-dark" : ""}`}>{children}</span>;
 }
 
-/** Circular arrow button — appears on project cards and inside CTAs. */
 export function ArrowCircle({
   className = "",
   size = "h-9 w-9",
@@ -75,11 +71,8 @@ export function ArrowCircle({
 }
 
 const variants = {
-  /* Accent pill with a white circular arrow — the primary CTA. */
   accent: "bg-accent text-white hover:bg-accent-hover",
-  /* White pill on imagery or dark panels. */
   white: "bg-white text-ink hover:bg-cream-2",
-  /* Near-black pill on light sections. */
   dark: "bg-ink text-white hover:bg-ink-2",
   outline: "border border-line text-ink hover:border-accent hover:text-accent",
 } as const;
@@ -90,12 +83,14 @@ export function Button({
   variant = "accent",
   className = "",
   arrow = true,
+  size = "md",
 }: {
   href: string;
   children: ReactNode;
   variant?: keyof typeof variants;
   className?: string;
   arrow?: boolean;
+  size?: "sm" | "md" | "lg";
 }) {
   const arrowTone =
     variant === "accent"
@@ -104,7 +99,13 @@ export function Button({
         ? "bg-accent text-white"
         : "bg-white text-ink";
 
-  const classes = `group inline-flex items-center gap-2.5 rounded-full py-2 pl-6 pr-2 text-sm font-medium shadow-pill transition-[transform,box-shadow,background-color] duration-200 ease-out hover:-translate-y-0.5 hover:shadow-btn active:translate-y-0 active:shadow-pill ${variants[variant]} ${className}`;
+  const sizeClasses = {
+    sm: "py-2 px-4 text-xs",
+    md: "py-2.5 px-5 text-sm",
+    lg: "py-3 px-6 text-base",
+  };
+
+  const classes = `group inline-flex items-center gap-2.5 rounded-full font-medium shadow-pill transition-[transform,box-shadow,background-color] duration-200 ease-out hover:-translate-y-0.5 hover:shadow-btn active:translate-y-0 active:shadow-pill focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 ${variants[variant]} ${sizeClasses[size]} ${className}`;
 
   const inner = (
     <>
@@ -118,18 +119,11 @@ export function Button({
     </>
   );
 
-  const external =
-    href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:");
+  const external = href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:");
 
   if (external) {
     return (
-      <a
-        href={href}
-        className={classes}
-        {...(href.startsWith("http")
-          ? { target: "_blank", rel: "noreferrer noopener" }
-          : {})}
-      >
+      <a href={href} className={classes} {...(href.startsWith("http") ? { target: "_blank", rel: "noreferrer noopener" } : {})}>
         {inner}
       </a>
     );
@@ -142,10 +136,6 @@ export function Button({
   );
 }
 
-/**
- * Section head: chip on the left, big heading, and optional supporting copy +
- * action pushed to the right — the exact arrangement used throughout Decori.
- */
 export function SectionHead({
   chip,
   title,
@@ -161,23 +151,18 @@ export function SectionHead({
   dark?: boolean;
   align?: "split" | "center";
 }) {
+  const textClass = dark ? "text-on-dark" : "text-ink";
+  const bodyClass = dark ? "text-on-dark-dim" : "text-text-body";
+
   if (align === "center") {
     return (
       <div className="flex flex-col items-center text-center">
         <Chip dark={dark}>{chip}</Chip>
-        <h2
-          className={`h-display mt-5 max-w-3xl text-3xl sm:text-4xl lg:text-[2.75rem] ${
-            dark ? "text-on-dark" : "text-ink"
-          }`}
-        >
+        <h2 className={`h-display mt-5 max-w-3xl text-3xl sm:text-4xl lg:text-[2.75rem] ${textClass}`}>
           {title}
         </h2>
         {intro ? (
-          <p
-            className={`mt-4 max-w-2xl text-[0.95rem] leading-relaxed ${
-              dark ? "text-on-dark-dim" : "text-text-body"
-            }`}
-          >
+          <p className={`mt-4 max-w-2xl text-[0.95rem] leading-relaxed ${bodyClass}`}>
             {intro}
           </p>
         ) : null}
@@ -186,31 +171,23 @@ export function SectionHead({
   }
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-end lg:gap-16">
+    <div className="grid gap-8 lg:grid-cols-[1.15fr_1fr] lg:items-end lg:gap-16">
       <div>
         <Chip dark={dark}>{chip}</Chip>
-        <h2
-          className={`h-display mt-5 text-3xl sm:text-4xl lg:text-[2.75rem] ${
-            dark ? "text-on-dark" : "text-ink"
-          }`}
-        >
+        <h2 className={`h-display mt-5 text-3xl sm:text-4xl lg:text-[2.75rem] ${textClass}`}>
           {title}
         </h2>
       </div>
-      {intro || action ? (
+      {(intro || action) && (
         <div className="flex flex-col items-start gap-5 lg:items-end">
-          {intro ? (
-            <p
-              className={`max-w-md text-[0.95rem] leading-relaxed lg:text-right ${
-                dark ? "text-on-dark-dim" : "text-text-body"
-              }`}
-            >
+          {intro && (
+            <p className={`max-w-md text-[0.95rem] leading-relaxed lg:text-right ${bodyClass}`}>
               {intro}
             </p>
-          ) : null}
+          )}
           {action}
         </div>
-      ) : null}
+      )}
     </div>
   );
 }

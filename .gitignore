@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Source design renders — optimized WebP in public/img is what ships
 design-src/
+
+# Design reference screenshots — not part of the build
+refremnce/
